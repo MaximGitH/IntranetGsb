@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+	position: relative;
+	display: flex;
+	width: 100%;
+    height: 70px;
+    background-color: rgba(15, 125, 242, 0.604);
+    z-index: 20;
+}
+
+/*** Logo GSB ****/ 
+.logo{ /* DIV */
+    text-align: center;
+}
+
+.logo img { /*Image du logo */
+    height: 5rem;
+    width: 5rem;
+}
+/******************/
+
+/* Liens des menus */
+.liens-menus{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7px;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.liens-menus li a{ /* Textes dans les menus */
+	color: white;
+    text-decoration: 2px underline;
+    text-align: center;
+    text-shadow: 0 0 8px black, 8px 0 8px black;
+    letter-spacing: 4px;
+    margin-left: 8px;
+ 	margin-right: 10px;
+ 	font-size: 15px;
+    font-weight: bold;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.liens-menus li a:hover { /* Textes dans les menus lors du survol */
+    text-shadow: 0 0 8px blue, 0 0 10px blue, 0 0 20px white, 0 0 25px white, 0 0 30px white;
+
+}
+
+.liens-menus li {
+    position: relative;
+}
+
+.icone_menu {/* Icone du menu */
+    display: none;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(7, 5, 46);
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+
+.icone_menu:hover {/* Icone du menu lors du survol */
+    top: 10px;
+    -webkit-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+}
+
+/* Media Queries RESPONSIVE DESIGN */
+
+@media screen and (max-width: 1000px){/* Menu rétréci jusqu'à atteindre 1000px pour un écran */
+	
+	/* Menu rétréci pour les petits écrans */
+    .menu{
+        position: relative;
+        z-index: 3;
+    }
+    
+    .icone_menu {
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        -webkit-transform: translate(-5%, -50%);
+        -ms-transform: translate(-5%, -50%);
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        -webkit-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+    }
+    
+    .liens-menus{ /** Lorsque le menu est ouvert **/
+        position: fixed;
+        background: rgb(11, 7, 72);
+        width: 100%;
+        height: 100vh;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-clip-path: circle(50px at 90% -10%);
+        clip-path: circle(50px at 90% -20%);
+        -webkit-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    
+    .liens-menus.open{ /** Lorsque le menu est ouvert **/
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        clip-path: circle(1000px at 90% -10%);
+        
+        pointer-events: all;
+    }
+    
+    .liens-menus li{/* Les liens du menu sont invisible lorsque le menu est rétréci */
+        opacity: 0;
+    }
+    
+    li.apparition{/* Apparition des liens du menu */
+        opacity: 1;
+        -webkit-transition: all 0.5s ease 0.4s;
+        -o-transition: all 0.5s ease 0.4s;
+        transition: all 0.5s ease 0.4s;
+        text-align: center;
+    }
+    
+}

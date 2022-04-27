@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>AddPage</title>
+<link type="text/css" rel="stylesheet" href="../css/fpdf.css">
+</head>
+<body>
+<h1>AddPage</h1>
+<code>AddPage([<b>string</b> orientation [, <b>mixed</b> size [, <b>int</b> rotation]]])</code>
+<h2>Description</h2>
+Ajoute une nouvelle page au document. Si une page �tait en cours, la m�thode Footer() est
+appel�e pour traiter le pied de page. Puis la page est ajout�e, la position courante
+mise en haut � gauche en fonction des marges gauche et haute, et Header() est appel�e
+pour afficher l'en-t�te.
+<br>
+La police qui �tait en cours au moment de l'appel est automatiquement restaur�e. Il n'est
+donc pas n�cessaire d'appeler � nouveau SetFont() si vous souhaitez continuer avec la m�me
+police. M�me chose pour les couleurs et l'�paisseur du trait.
+<br>
+L'origine du syst�me de coordonn�es est en haut � gauche et les ordonn�es croissantes vont
+vers le bas.
+<h2>Param�tres</h2>
+<dl class="param">
+<dt><code>orientation</code></dt>
+<dd>
+Orientation de la page. Les valeurs possibles sont (ind�pendamment de la casse) :
+<ul>
+<li><code>P</code> ou <code>Portrait</code></li>
+<li><code>L</code> ou <code>Landscape</code></li>
+</ul>
+La valeur par d�faut est celle indiqu�e dans le constructeur.
+</dd>
+<dt><code>size</code></dt>
+<dd>
+Format de la page. Il peut s'agir d'une des valeurs ci-dessous (ind�pendamment de la casse) :
+<ul>
+<li><code>A3</code></li>
+<li><code>A4</code></li>
+<li><code>A5</code></li>
+<li><code>Letter</code></li>
+<li><code>Legal</code></li>
+</ul>
+ou bien d'un tableau contenant la largeur et la hauteur (exprim�es en unit� utilisateur).<br>
+<br>
+La valeur par d�faut est celle indiqu�e dans le constructeur.
+</dd>
+<dt><code>rotation</code></dt>
+<dd>
+Angle de rotation de la page. La valeur doit �tre un multiple de 90 ; la rotation se fait
+dans le sens horaire. La valeur par d�faut est <code>0</code>.
+</dd>
+</dl>
+<h2>Voir</h2>
+<a href="__construct.htm">__construct</a>,
+<a href="header.htm">Header</a>,
+<a href="footer.htm">Footer</a>,
+<a href="setmargins.htm">SetMargins</a>
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Index</a></div>
+</body>
+</html>

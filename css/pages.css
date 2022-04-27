@@ -1,0 +1,218 @@
+/**** Page : Remplir fiche *****/
+#Renseignement_fiche { /* Body */
+    background: -webkit-linear-gradient(-50deg, #52E5E7, #4a45e5d2, #81e7d9, #58a8dd);
+    background: -o-linear-gradient(-50deg, #52E5E7, #4a45e5d2, #81e7d9, #58a8dd);
+    background: linear-gradient(-50deg, #52E5E7, #4a45e5d2, #81e7d9, #58a8dd); /* Background / arrière-plan */
+	background-size: 350% 350%;
+	
+    -webkit-animation: dégradé 15s ease infinite;
+    animation: dégradé 15s ease infinite;
+    overflow: auto;
+}
+
+.titre_remplir_fiche { /*titre */
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    border-color: black;
+    background-color: rgba(37, 31, 106, 0.57);
+    color: rgb(255, 255, 255);
+    -webkit-animation-name: titre_grossissant;
+    animation-name: titre_grossissant;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.titres_devant_les_champs {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.titres_devant_les_champs_1 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/***************FIN => Page Remplir fiche ************************/
+
+
+
+
+/*** Page : Affiche_fiche visiteur ***/
+#Affiche_fiche { /* body */
+    background-image: -webkit-linear-gradient(-90deg,  rgba(158,252,203,1) 16.8%, rgba(63,100,255,1) 105.2% );
+    background-image: -o-linear-gradient(right,  rgba(158,252,203,1) 16.8%, rgba(63,100,255,1) 105.2% );
+    background-image: linear-gradient(-90deg,  rgba(158,252,203,1) 16.8%, rgba(63,100,255,1) 105.2% );
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+.boutons_affiche_fiche { /* DIV Boutons Valider et annuler */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bouton_valider_affiche_fiche { /* Bouton valider */
+    margin-right: 15px;
+}
+
+.bouton_annuler_affiche_fiche { /* Bouton annuler */
+    margin-left: 15px;
+}
+
+.bouton_valider_affiche_fiche, .bouton_annuler_affiche_fiche { /* Bouton valider et bouton annuler */
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 7px 5px 6px black;
+    background-color: rgb(191, 222, 226);
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+}
+
+.bouton_valider_affiche_fiche:hover, .bouton_annuler_affiche_fiche:hover { /* Bouton valider et bouton annuler au survol de la souris */
+    box-shadow: none;
+    transform: scale(1.1);
+    background-color: rgb(44, 44, 168);
+    color: white;
+    font-size: 12px;
+}
+
+/****************FIN => Page Affiche fiche visiteur ***********************************/
+
+
+
+.select-text { /* Champs à remplir dans les pages Affiche_fiche et Remplir_fiche côté visiteur */
+    border-radius: 10px;
+    border-color: rgb(45, 157, 249);
+}
+
+
+
+/********************* Page Vehicule.php ********************************************/
+
+#Vehicule {/*body*/
+    background: #8787e3cf;
+    background: -o-linear-gradient(88deg, #8787e3cf, #86A8E7, #6DD5FA, #f2fcfe);
+    background: -webkit-linear-gradient(88deg, #8787e3cf, #86A8E7, #6DD5FA, #f2fcfe);
+    background: linear-gradient(88deg, #8787e3cf, #86A8E7, #6DD5FA, #f2fcfe);
+    background-size: 350% 350%;
+    -webkit-animation: dégradé 15s ease infinite;
+    animation: dégradé 15s ease infinite;
+    overflow: auto;
+}
+
+.titre_choix_véhicule {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 30px;
+    margin-bottom: 18px;
+}
+/***************** FIN => Page Vehicule ***************/
+
+
+
+/******** Page : "Affiche_fiche_comptable" ********/
+
+#Affiche_fiche_comptable { /* Body */
+  background: #eaecc6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2bc0e4, #eaecc6); /* Chrome 10-25, Safari 5.1-6 */
+  background: -o-linear-gradient(to right, #2bc0e4, #eaecc6);
+  background: linear-gradient(to right, #2bc0e4, #eaecc6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+/***************** FIN => Page Affiche_fiche_comptable *****************/
+
+
+
+/* ANIMATIONS */
+/* Animation du background */
+
+@-webkit-keyframes dégradé {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes dégradé {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/***********************************/
+
+
+/** Animations titre **/
+
+@-webkit-keyframes titre_grossissant {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px) opacity(0%);
+      filter: blur(12px) opacity(0%);
+    }
+    30% {
+      letter-spacing: 0;
+      -webkit-filter: blur(0) opacity(1);
+      filter: blur(0) opacity(1);
+    }
+    70% {
+      letter-spacing: 0;
+      -webkit-filter: blur(0) opacity(1);
+      filter: blur(0) opacity(1);
+    }
+    100% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px) opacity(0%);
+      filter: blur(12px) opacity(0%);
+    }
+  }
+
+
+@keyframes titre_grossissant {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px) opacity(0%);
+      filter: blur(12px) opacity(0%);
+    }
+    30% {
+      letter-spacing: 0;
+      -webkit-filter: blur(0) opacity(1);
+      filter: blur(0) opacity(1);
+    }
+    70% {
+      letter-spacing: 0;
+      -webkit-filter: blur(0) opacity(1);
+      filter: blur(0) opacity(1);
+    }
+    100% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px) opacity(0%);
+      filter: blur(12px) opacity(0%);
+    }
+  }

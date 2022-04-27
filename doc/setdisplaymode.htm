@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>SetDisplayMode</title>
+<link type="text/css" rel="stylesheet" href="../css/fpdf.css">
+</head>
+<body>
+<h1>SetDisplayMode</h1>
+<code>SetDisplayMode(<b>mixed</b> zoom [, <b>string</b> layout])</code>
+<h2>Description</h2>
+Contr�le la mani�re dont le document sera affich� par le lecteur. On peut r�gler le niveau de
+zoom : afficher la page en entier, occuper toute la largeur de la fen�tre, utiliser la taille
+r�elle, choisir un facteur de zoom particulier ou encore utiliser la valeur par d�faut de
+l'utilisateur (celle param�tr�e dans le menu Pr�f�rences d'Adobe Reader). On peut �galement
+sp�cifier la disposition des pages : une seule � la fois, affichage continu, pages sur deux
+colonnes ou r�glage par d�faut.
+<h2>Param�tres</h2>
+<dl class="param">
+<dt><code>zoom</code></dt>
+<dd>
+Le zoom � utiliser. Il peut prendre l'une des valeurs cha�nes suivantes :
+<ul>
+<li><code>fullpage</code> : affiche enti�rement les pages � l'�cran</li>
+<li><code>fullwidth</code> : maximise la largeur des pages</li>
+<li><code>real</code> : affiche la taille r�elle (�quivaut � un zoom de 100%)</li>
+<li><code>default</code> : utilise le mode d'affichage par d�faut du lecteur</li>
+</ul>
+ou bien un entier indiquant le facteur de zoom � utiliser.
+</dd>
+<dt><code>layout</code></dt>
+<dd>
+La disposition des pages. Les valeurs possibles sont :
+<ul>
+<li><code>single</code> : affiche une seule page � la fois</li>
+<li><code>continuous</code> : affichage continu d'une page � l'autre</li>
+<li><code>two</code> : affiche deux pages sur deux colonnes</li>
+<li><code>default</code> : utilise le mode d'affichage par d�faut du lecteur</li>
+</ul>
+La valeur par d�faut est <code>default</code>.
+</dd>
+</dl>
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Index</a></div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Image</title>
+<link type="text/css" rel="stylesheet" href="../css/fpdf.css">
+</head>
+<body>
+<h1>Image</h1>
+<code>Image(<b>string</b> file [, <b>float</b> x [, <b>float</b> y [, <b>float</b> w [, <b>float</b> h [, <b>string</b> type [, <b>mixed</b> link]]]]]])</code>
+<h2>Description</h2>
+Place une image. Les dimensions occup�es dans la page peuvent �tre indiqu�es de plusieurs mani�res :
+<ul>
+<li>largeur et hauteur explicites (exprim�es dans l'unit� utilisateur ou en dpi)</li>
+<li>une dimension explicite, l'autre �tant calcul�e automatiquement afin de respecter les
+proportions de l'image originale</li>
+<li>aucune dimension explicite, auquel cas l'image est dimensionn�e en 96 dpi</li>
+</ul>
+Les formats support�s sont le JPEG, le PNG et le GIF. Le GIF n�cessite l'extension GD.
+<br>
+<br>
+Pour le JPEG, toutes les variantes sont autoris�es :
+<ul>
+<li>niveaux de gris</li>
+<li>couleurs vraies (24 bits)</li>
+<li>CMYK (32 bits)</li>
+</ul>
+Pour le PNG, sont autoris�es :
+<ul>
+<li>les images en niveaux de gris sur 8 bits au plus (256 teintes)</li>
+<li>les images en couleurs index�es</li>
+<li>les images en couleurs vraies (24 bits)</li>
+</ul>
+Pour le GIF : en cas de GIF anim�, seule la premi�re image est affich�e.<br>
+<br>
+La transparence est g�r�e.<br>
+<br>
+Le format peut �tre sp�cifi� explicitement ou bien d�duit de l'extension du fichier.<br>
+<br>
+Il est possible de mettre un lien sur l'image.<br>
+<br>
+Remarque : si une image est utilis�e plusieurs fois, une seule copie est int�gr�e au document.
+<h2>Param�tres</h2>
+<dl class="param">
+<dt><code>file</code></dt>
+<dd>
+Chemin ou URL de l'image.
+</dd>
+<dt><code>x</code></dt>
+<dd>
+Abscisse du coin sup�rieur gauche. Si non pr�cis�e ou �gale � <code>null</code>, l'abscisse courante
+est utilis�e.
+</dd>
+<dt><code>y</code></dt>
+<dd>
+Ordonn�e du coin sup�rieur gauche. Si non pr�cis�e ou �gale � <code>null</code>, l'ordonn�e courante
+est utilis�e ; de plus, un saut de page est d'abord effectu� si n�cessaire (en cas de saut de page
+automatique) ; puis, apr�s l'appel, l'ordonn�e courante est positionn�e en bas de l'image.
+</dd>
+<dt><code>w</code></dt>
+<dd>
+Largeur de l'image dans la page. Il y a trois cas possibles :
+<ul>
+<li>Si la valeur est positive, elle repr�sente la largeur en unit� utilisateur</li>
+<li>Si la valeur est n�gative, sa valeur absolue repr�sente la r�solution horizontale en dpi</li>
+<li>Si elle n'est pas indiqu�e ou vaut z�ro, elle est calcul�e automatiquement</li>
+</ul>
+</dd>
+<dt><code>h</code></dt>
+<dd>
+Hauteur de l'image dans la page. Il y a trois cas possibles :
+<ul>
+<li>Si la valeur est positive, elle repr�sente la hauteur en unit� utilisateur</li>
+<li>Si la valeur est n�gative, sa valeur absolue repr�sente la r�solution verticale en dpi</li>
+<li>Si elle n'est pas indiqu�e ou vaut z�ro, elle est calcul�e automatiquement</li>
+</ul>
+</dd>
+<dt><code>type</code></dt>
+<dd>
+Format de l'image. Les valeurs possibles sont (ind�pendamment de la casse) : <code>JPG</code>,
+<code>JPEG</code>, <code>PNG</code> et <code>GIF</code>.
+S'il n'est pas pr�cis�, le type est d�duit de l'extension du fichier.
+</dd>
+<dt><code>link</code></dt>
+<dd>
+URL ou identifiant retourn� par AddLink().
+</dd>
+</dl>
+<h2>Exemple</h2>
+<div class="doc-source">
+<pre><code>// Ins�re un logo en haut � gauche � 300 dpi
+$pdf-&gt;Image('logo.png',10,10,-300);
+// Ins�re une image dynamique � partir d'une URL
+$pdf-&gt;Image('http://chart.googleapis.com/chart?cht=p3&amp;chd=t:60,40&amp;chs=250x100&amp;chl=Hello|World',60,30,90,0,'PNG');</code></pre>
+</div>
+<h2>Voir</h2>
+<a href="addlink.htm">AddLink</a>
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Index</a></div>
+</body>
+</html>

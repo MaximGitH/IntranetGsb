@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>SetFont</title>
+<link type="text/css" rel="stylesheet" href="../css/fpdf.css">
+</head>
+<body>
+<h1>SetFont</h1>
+<code>SetFont(<b>string</b> family [, <b>string</b> style [, <b>float</b> size]])</code>
+<h2>Description</h2>
+Fixe la police utilis�e pour imprimer les cha�nes de caract�res. Il est obligatoire
+d'appeler cette m�thode au moins une fois avant d'imprimer du texte, sinon le document
+r�sultant ne sera pas valide.
+<br>
+La police peut �tre soit une police standard, soit une police ajout�e � l'aide de la m�thode
+AddFont(). Les polices standard utilisent l'encodage Windows cp1252 (Europe de l'ouest).
+<br>
+La m�thode peut �tre appel�e avant que la premi�re page ne soit cr��e et la police est
+conserv�e de page en page.
+<br>
+Si vous souhaitez juste changer la taille courante, il est plus simple d'appeler SetFontSize().
+<br>
+<br>
+<strong>Note :</strong> il est n�cessaire que les fichiers de d�finition soient accessibles. Il sont
+recherch�s successivement dans :
+<ul>
+<li>Le r�pertoire d�fini par la constante <code>FPDF_FONTPATH</code> (si cette constante est d�finie)</li>
+<li>Le r�pertoire <code>font</code> situ� dans le r�pertoire de <code>fPdf.php</code> (s'il existe)</li>
+<li>Les r�pertoires accessibles par <code>include()</code></li>
+</ul>
+Exemple d'utilisation de <code>FPDF_FONTPATH</code>:
+<div class="doc-source">
+<pre><code>define('FPDF_FONTPATH','/home/www/font');
+require('fPdf.php');</code></pre>
+</div>
+Si le fichier correspondant � la police demand�e n'est pas trouv�, l'erreur "Could not include
+font definition file" est g�n�r�e.
+<h2>Param�tres</h2>
+<dl class="param">
+<dt><code>family</code></dt>
+<dd>
+Famille de la police. Il peut s'agir d'un nom d�fini par AddFont() ou bien d'une des familles
+standard :
+<ul>
+<li><code>Courier</code> (caract�res de largeur fixe)</li>
+<li><code>Helvetica</code> ou <code>Arial</code> (synonymes; sans serif)</li>
+<li><code>Times</code> (avec serif)</li>
+<li><code>Symbol</code> (symboles)</li>
+<li><code>ZapfDingbats</code> (symboles)</li>
+</ul>
+Le nom n'est pas sensible � la casse.
+<br>
+Il est �galement possible de passer une cha�ne vide, auquel cas la famille courante est
+conserv�e.
+</dd>
+<dt><code>style</code></dt>
+<dd>
+Style de la police. Les valeurs possibles sont (ind�pendamment de la casse) :
+<ul>
+<li>cha�ne vide : normal</li>
+<li><code>B</code> : gras</li>
+<li><code>I</code> : italique</li>
+<li><code>U</code> : soulign�</li>
+</ul>
+ou une combinaison quelconque. La valeur par d�faut est le style normal.
+Les styles gras et italique ne s'appliquent pas aux familles <code>Symbol</code> et <code>ZapfDingbats</code>.
+</dd>
+<dt><code>size</code></dt>
+<dd>
+Taille de la police en points.
+<br>
+La valeur par d�faut est la taille courante. Si aucune taille n'a encore �t� sp�cifi�e
+depuis le d�but du document, la valeur prise est 12.
+</dd>
+</dl>
+<h2>Exemple</h2>
+<div class="doc-source">
+<pre><code>// Times normal 12
+$pdf-&gt;SetFont('Times');
+// Arial gras 14
+$pdf-&gt;SetFont('Arial','B',14);
+// Enl�ve le gras
+$pdf-&gt;SetFont('');
+// Times gras, italique et soulign� 14
+$pdf-&gt;SetFont('Times','BIU');</code></pre>
+</div>
+<h2>Voir</h2>
+<a href="addfont.htm">AddFont</a>,
+<a href="setfontsize.htm">SetFontSize</a>,
+<a href="cell.htm">Cell</a>,
+<a href="multicell.htm">MultiCell</a>,
+<a href="write.htm">Write</a>
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Index</a></div>
+</body>
+</html>

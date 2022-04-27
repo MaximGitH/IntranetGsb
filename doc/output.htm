@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Output</title>
+<link type="text/css" rel="stylesheet" href="../css/fpdf.css">
+</head>
+<body>
+<h1>Output</h1>
+<code><b>string</b> Output([<b>string</b> dest [, <b>string</b> name [, <b>boolean</b> isUTF8]]])</code>
+<h2>Description</h2>
+Envoie le document vers une destination donn�e : navigateur, fichier ou cha�ne de caract�res.
+Dans le cas du navigateur, on peut utiliser le visualiseur PDF ou bien forcer le t�l�chargement.
+<br>
+La m�thode commence par appeler Close() si n�cessaire pour terminer le document.
+<h2>Param�tres</h2>
+<dl class="param">
+<dt><code>dest</code></dt>
+<dd>
+Destination o� envoyer le document. Le param�tre peut prendre les valeurs suivantes :
+<ul>
+<li><code>I</code> : envoyer en inline au navigateur. Le visualiseur PDF est utilis�.</li>
+<li><code>D</code> : envoyer au navigateur en for�ant le t�l�chargement, avec le nom indiqu� dans <code>name</code>.</li>
+<li><code>F</code> : sauver dans un fichier local, avec le nom indiqu� dans <code>name</code>
+(peut inclure un r�pertoire).</li>
+<li><code>S</code> : renvoyer le document sous forme de cha�ne.</li>
+</ul>
+La valeur par d�faut est <code>I</code>.
+</dd>
+<dt><code>name</code></dt>
+<dd>
+Le nom du fichier. Il est ignor� dans le cas de la destination <code>S</code>.<br>
+La valeur par d�faut est <code>doc.pdf</code>.
+</dd>
+<dt><code>isUTF8</code></dt>
+<dd>
+Indique si <code>name</code> est encod� en ISO-8859-1 (<code>false</code>) ou en UTF-8 (<code>true</code>).<br>
+Ce param�tre est utilis� uniquement pour les destinations <code>I</code> et <code>D</code>.<br>
+La valeur par d�faut est <code>false</code>.
+</dd>
+</dl>
+<h2>Voir</h2>
+<a href="close.htm">Close</a>
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Index</a></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>MultiCell</title>
+<link type="text/css" rel="stylesheet" href="../css/fpdf.css">
+</head>
+<body>
+<h1>MultiCell</h1>
+<code>MultiCell(<b>float</b> w, <b>float</b> h, <b>string</b> txt [, <b>mixed</b> border [, <b>string</b> align [, <b>boolean</b> fill]]])</code>
+<h2>Description</h2>
+Cette m�thode permet d'imprimer du texte avec des retours � la ligne. Ceux-ci peuvent �tre
+automatiques (d�s que le texte atteint le bord droit de la cellule) ou explicites (via le
+caract�re \n). Autant de cellules que n�cessaire sont imprim�es, les unes en dessous des
+autres.
+<br>
+Le texte peut �tre align�, centr� ou justifi�. Le bloc de cellules peut �tre encadr� et le
+fond color�.
+<h2>Param�tres</h2>
+<dl class="param">
+<dt><code>w</code></dt>
+<dd>
+Largeur des cellules. Si elle vaut <code>0</code>, elles s'�tendent jusqu'� la marge droite de
+la page.
+</dd>
+<dt><code>h</code></dt>
+<dd>
+Hauteur des cellules.
+</dd>
+<dt><code>txt</code></dt>
+<dd>
+Cha�ne � imprimer.
+</dd>
+<dt><code>border</code></dt>
+<dd>
+Indique si des bords doivent �tre trac�s autour du bloc de cellules. La valeur peut �tre soit un
+nombre :
+<ul>
+<li><code>0</code> : aucun bord</li>
+<li><code>1</code> : cadre</li>
+</ul>
+soit une cha�ne contenant certains ou tous les caract�res suivants (dans un ordre quelconque) :
+<ul>
+<li><code>L</code> : gauche</li>
+<li><code>T</code> : haut</li>
+<li><code>R</code> : droit</li>
+<li><code>B</code> : bas</li>
+</ul>
+La valeur par d�faut est <code>0</code>.
+</dd>
+<dt><code>align</code></dt>
+<dd>
+Contr�le l'alignement du texte. Les valeurs possibles sont :
+<ul>
+<li><code>L</code> : alignement � gauche</li>
+<li><code>C</code> : centrage</li>
+<li><code>R</code> : alignement � droite</li>
+<li><code>J</code> : justification (valeur par d�faut)</li>
+</ul>
+</dd>
+<dt><code>fill</code></dt>
+<dd>
+Indique si le fond des cellules doit �tre color� (<code>true</code>) ou transparent (<code>false</code>).
+Valeur par d�faut : <code>false</code>.
+</dd>
+</dl>
+<h2>Voir</h2>
+<a href="setfont.htm">SetFont</a>,
+<a href="setdrawcolor.htm">SetDrawColor</a>,
+<a href="setfillcolor.htm">SetFillColor</a>,
+<a href="settextcolor.htm">SetTextColor</a>,
+<a href="setlinewidth.htm">SetLineWidth</a>,
+<a href="cell.htm">Cell</a>,
+<a href="write.htm">Write</a>,
+<a href="setautopagebreak.htm">SetAutoPageBreak</a>
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Index</a></div>
+</body>
+</html>

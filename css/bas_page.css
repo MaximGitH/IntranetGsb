@@ -1,0 +1,60 @@
+/** footer ***/ 
+
+
+.footer{
+    position: absolute;
+    height: 120px;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    width: 100%;
+    background:rgb(7, 5, 46);
+    padding: 30px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-top: thick double white;
+  }
+  
+  .footer .copyright { /* Textes dans le footer */
+    width: 100%;
+    margin-top: 30px;
+    color: white;
+  }
+
+  
+  /*** Fin footer ***/
+
+
+  /******* RESPONSIVE DESIGN *************/
+
+  @media (min-width: 420px) and (max-width: 600px) {
+    .footer .copyright {
+        font-size: 15px;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+      }
+}
+
+
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .footer .copyright {
+    font-size: 17px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .footer .copyright {
+        font-size: 17px;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+      }
+}

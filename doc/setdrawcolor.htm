@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>SetDrawColor</title>
+<link type="text/css" rel="stylesheet" href="../css/fpdf.css">
+</head>
+<body>
+<h1>SetDrawColor</h1>
+<code>SetDrawColor(<b>int</b> r [, <b>int</b> g, <b>int</b> b])</code>
+<h2>Description</h2>
+Fixe la couleur pour toutes les op�rations de trac� (lignes, rectangles et contours de
+cellules). Elle peut �tre indiqu�e en composantes RGB ou en niveau de gris. La m�thode
+peut �tre appel�e avant que la premi�re page ne soit cr��e et la valeur est conserv�e de
+page en page.
+<h2>Param�tres</h2>
+<dl class="param">
+<dt><code>r</code></dt>
+<dd>
+Si <code>g</code> et <code>b</code> sont renseign�s, composante de rouge; sinon, indique le
+niveau de gris. Valeur comprise entre 0 et 255.
+</dd>
+<dt><code>g</code></dt>
+<dd>
+Composante de vert (entre 0 et 255).
+</dd>
+<dt><code>b</code></dt>
+<dd>
+Composante de bleu (entre 0 et 255).
+</dd>
+</dl>
+<h2>Voir</h2>
+<a href="setfillcolor.htm">SetFillColor</a>,
+<a href="settextcolor.htm">SetTextColor</a>,
+<a href="line.htm">Line</a>,
+<a href="rect.htm">Rect</a>,
+<a href="cell.htm">Cell</a>,
+<a href="multicell.htm">MultiCell</a>
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Index</a></div>
+</body>
+</html>
